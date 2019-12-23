@@ -1,11 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Test2(props){
-  return <h1>hihi {props.food} </h1>
+function Test2({food}){
+  return <h1>hihi {food} </h1>
 }
 
-const foodIlike = ['stake', 'ramen', 'KFC']
-
+const foodIlike = ['stake', 'ramen', 'KFC', 123]
+Test2.propTypes = {
+  food : PropTypes.string.isRequired
+}
 
 function renderTest(names){
     return <Test2 food={names} />
