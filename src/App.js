@@ -1,28 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Test2({food}){
-  return <h1>hihi {food} </h1>
-}
+class App extends React.Component{
+  state = {
+    count : 0
+  };
+  add = () => {
+    
+  };
+  minus  = () => {
+    
+  };
 
-const foodIlike = ['stake', 'ramen', 'KFC', 123]
-Test2.propTypes = {
-  food : PropTypes.string.isRequired
-}
-
-function renderTest(names){
-    return <Test2 food={names} />
-}
-
-
-function App() {
-  return (
-    <div>HELLO!!
-    {foodIlike.map(renderTest)}
-
-
+  render(){
+  return(
+    <div>
+      <h1>The number is : {this.state.count}</h1>
+      <button onClick={this.add}>add</button>
+      <button onClick={this.minus}>minus</button>
     </div>
-  );
+  )
+  
+  }
+
 }
 
 export default App;
