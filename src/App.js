@@ -6,10 +6,16 @@ function Test2(props){
 
 const foodIlike = ['stake', 'ramen', 'KFC']
 
+
+function renderTest(names){
+    return <Test2 food={names} />
+}
+
+
 function App() {
   return (
     <div>HELLO!!
-    {foodIlike.map(dish => <Test2 food={dish} />)}
+    {foodIlike.map(renderTest)}
 
 
     </div>
